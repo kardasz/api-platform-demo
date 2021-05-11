@@ -1,0 +1,42 @@
+\Symfony\Component\HttpFoundation\File\UploadedFile:
+  uploaded_image:
+    __construct:
+      - 'tests/Functional/Api/Resources/MediaObjects/Files/cyprus-3184019_1920.jpg'
+      - '<uuid()>.jpg'
+      - 'image/jpeg'
+  uploaded_pdf:
+    __construct:
+      - 'tests/Functional/Api/Resources/MediaObjects/Files/example.pdf'
+      - '<uuid()>.pdf'
+      - 'application/pdf'
+  uploaded_doc:
+    __construct:
+      - 'tests/Functional/Api/Resources/MediaObjects/Files/example.doc'
+      - '<uuid()>.doc'
+      - 'application/msword'
+  uploaded_docx:
+    __construct:
+      - 'tests/Functional/Api/Resources/MediaObjects/Files/example.docx'
+      - '<uuid()>.docx'
+      - 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+
+'\App\Entity\MediaObject':
+  media_object_1:
+    owner: "@user_1"
+    file: "@uploaded_image"
+    createdAt: <dateTime()>
+
+  media_object_2:
+    owner: "@user_1"
+    file: "@uploaded_pdf"
+    createdAt: <dateTime()>
+
+  media_object_3:
+    owner: "@user_1"
+    file: "@uploaded_doc"
+    createdAt: <dateTime()>
+
+  media_object_4:
+    owner: "@manager_1"
+    file: "@uploaded_docx"
+    createdAt: <dateTime()>

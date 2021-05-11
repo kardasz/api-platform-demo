@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      TZ: Europe/London
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: api_platform_demo
+
+  redis:
+    image: redis:5
+    environment:
+      TZ: Europe/London
+
+  php:
+    build: ./
+    environment:
+      APP_ENV: test
+      DATABASE_URL: mysql://root:root@mysql:3306/api_platform_demo_test?serverVersion=5.7
+      MESSENGER_TRANSPORT_DSN: redis://redis:6379/messages
+    depends_on:
+      - mysql
+      - redis
+    links:
+      - mysql
+      - redis
+    command: composer run-script phpunit

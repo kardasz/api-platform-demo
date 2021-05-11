@@ -1,0 +1,14 @@
+vich_uploader:
+    db_driver: orm
+    storage: gaufrette
+    mappings:
+        media_objects:
+            uri_prefix: /media
+            upload_destination: media_objects_fs
+            namer: Vich\UploaderBundle\Naming\OrignameNamer
+            directory_namer:
+                service: Vich\UploaderBundle\Naming\CurrentDateTimeDirectoryNamer
+                options:
+                    date_time_format: 'Y/m'
+                    date_time_property: 'createdAt'
+

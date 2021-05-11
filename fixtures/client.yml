@@ -1,0 +1,11 @@
+'\Trikoder\Bundle\OAuth2Bundle\Model\Grant':
+  grant_password:
+    __construct: ['password']
+
+'\Trikoder\Bundle\OAuth2Bundle\Model\Client':
+  test_client:
+    __construct:
+      - 'test_client_id'
+      - 'test_client_secret'
+    grants: '@grant_password'
+    active: true

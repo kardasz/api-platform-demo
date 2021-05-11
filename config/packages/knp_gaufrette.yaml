@@ -1,0 +1,17 @@
+knp_gaufrette:
+  stream_wrapper: ~
+  adapters:
+    media_objects_local_file_adapter:
+      local:
+        directory: '%kernel.project_dir%/public/media'
+#    media_objects_s3_adapter:
+#      aws_s3:
+#        service_id: file_store.s3
+#        bucket_name: '%env(AWS_BUCKET_NAME)%'
+#        detect_content_type: true
+#        options:
+#          create: true
+#          acl: 'public-read'
+  filesystems:
+    media_objects_fs:
+      adapter: media_objects_local_file_adapter

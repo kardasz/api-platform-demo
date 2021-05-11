@@ -1,0 +1,7 @@
+{
+  "@context": "/api/v1/contexts/User",
+  "@id": "/api/v1/users/@uuid@",
+  "@type": "User",
+  "firstName": "@string@",
+  "lastName": "@string@"
+}

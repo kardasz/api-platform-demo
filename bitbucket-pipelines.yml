@@ -1,0 +1,32 @@
+image: docker:stable
+
+options:
+  docker: true
+
+pipelines:
+  default:
+    - step:
+        name: Install composer dependencies
+        image: composer
+        caches:
+          - composer
+          - vendor
+        script:
+          - composer -n --no-ansi --no-scripts --ignore-platform-reqs install
+    - step:
+        name: Check coding standards
+        image: composer
+        caches:
+          - composer
+          - vendor
+        script:
+          - vendor/bin/php-cs-fixer fix --verbose --show-progress=estimating --dry-run --diff
+    - step:
+        name: Run unit tests
+        image: docker/compose:1.26.0
+        script:
+          - docker-compose -f docker-compose.test.yml run php
+
+definitions:
+  caches:
+    vendor: vendor

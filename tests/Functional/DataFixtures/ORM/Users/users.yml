@@ -1,0 +1,75 @@
+'\App\Entity\User':
+  super_admin_1:
+    email: "superadmin.1@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_SUPER_ADMIN']
+    active: true
+
+  admin_1:
+    email: "admin.1@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_ADMIN']
+    active: true
+
+  admin_2:
+    email: "admin.2@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_ADMIN']
+    active: true
+
+  manager_1:
+    email: "manager.1@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_MANAGER']
+    active: true
+
+  manager_2:
+    email: "manager.2@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_MANAGER']
+    active: true
+
+  user_1:
+    email: "user.1@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_USER']
+    active: true
+    manager: '@manager_1'
+
+  user_2:
+    email: "user.2@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_USER']
+    active: true
+    manager: '@manager_2'
+
+  user_3:
+    email: "user.3@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_USER']
+    active: true
+    manager: '@manager_2'
+
+  user_4:
+    email: "user.4@example.com"
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_USER']
+    active: true

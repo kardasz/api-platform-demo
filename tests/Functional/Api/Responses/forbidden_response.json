@@ -1,0 +1,7 @@
+{
+  "@context":"/api/v1/contexts/Error",
+  "@type":"hydra:Error",
+  "hydra:title":"An error occurred",
+  "hydra:description":"Access Denied.",
+  "trace": "@array@.optional()"
+}

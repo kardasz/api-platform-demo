@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      TZ: Europe/London
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: api_platform
+    volumes:
+      - mysql:/var/lib/mysql
+
+  redis:
+    image: redis:5
+    environment:
+      TZ: Europe/London
+
+  php:
+    build: ./
+    depends_on:
+      - mysql
+      - redis
+    links:
+      - mysql
+      - redis
+#    ports:
+#      - "80:8080"
+    volumes:
+      - ./:/var/www/
+
+volumes:
+  mysql:

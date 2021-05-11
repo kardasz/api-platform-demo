@@ -1,0 +1,21 @@
+trikoder_oauth2:
+
+    authorization_server:
+        private_key: '%env(base64:OAUTH2_PRIVATE_KEY_KEY)%'
+        private_key_passphrase: '%env(string:OAUTH2_PRIVATE_KEY_PASSPHRASE)%'
+        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'
+        enable_client_credentials_grant: true
+        enable_password_grant: true
+        enable_refresh_token_grant: true
+        enable_auth_code_grant: true
+        access_token_ttl:     PT1H
+        refresh_token_ttl:    P1M
+        auth_code_ttl:        PT10M
+
+    resource_server:
+        public_key: '%env(base64:OAUTH2_PUBLIC_KEY)%'
+
+    persistence:
+        doctrine: null
+
+

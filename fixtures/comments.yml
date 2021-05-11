@@ -1,0 +1,6 @@
+'\App\Entity\Comment':
+  article_{1..2000}:
+    content: '<text(500)>'
+    article: '@article_<numberBetween(1, 200)>'
+    author: '@user_<numberBetween(1, 100)>'
+    createdAt: <date_create()>

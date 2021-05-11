@@ -1,0 +1,17 @@
+{
+  "@context":"/api/v1/contexts/User",
+  "@id":"/api/v1/users",
+  "@type":"hydra:Collection",
+  "hydra:member":[
+    {
+      "@id":"/api/v1/users/@uuid@",
+      "@type":"User",
+      "email":"@string@.matchRegex('/^(user|admin|superadmin|manager)\\.[1234]@example\\.com$/')",
+      "firstName":"@string@",
+      "lastName":"@string@",
+      "id":"@uuid@"
+    },
+    "@...@"
+  ],
+  "hydra:totalItems":9
+}

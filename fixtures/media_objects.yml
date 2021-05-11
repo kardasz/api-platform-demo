@@ -1,0 +1,12 @@
+\Symfony\Component\HttpFoundation\File\UploadedFile:
+  uploaded_file_{1..200}:
+    __construct:
+      - '<image("/tmp", 800, 600)>'
+      - '<uuid()>.jpg'
+      - 'image/jpeg'
+
+'\App\Entity\MediaObject':
+  media_object_{1..200}:
+    owner: '@user_<numberBetween(1, 100)>'
+    file: '@uploaded_file_<current()>'
+    createdAt: <dateTime()>

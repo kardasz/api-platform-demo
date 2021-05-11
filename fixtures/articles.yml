@@ -1,0 +1,13 @@
+'\App\Entity\Article':
+  article_{1..200}:
+    'title (unique)': '<text(150)>'
+    content: '<text(2000)>'
+    author: '@user_<numberBetween(1, 100)>'
+    publishedAt: '<date_create()>'
+    createdAt: '<date_create()>'
+    status: '<randomElement("draft", "published", "trashed)>'
+    __calls:
+      - addMediaObjects:
+        - '5x @media_object_*'
+      - addTags:
+        - '10x @tag_*'

@@ -1,0 +1,37 @@
+'\App\Entity\User':
+  super_admin_1:
+    email: 'superadmin.1\@example.com'
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_SUPER_ADMIN']
+    active: true
+    createdAt: <date_create()>
+
+  admin_{1..5}:
+    email: 'admin.<current()>\@example.com'
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_ADMIN']
+    active: true
+    createdAt: <date_create()>
+
+  manager_{1..10}:
+    email: 'manager.<current()>\@example.com'
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_MANAGER']
+    active: true
+    createdAt: <date_create()>
+
+  user_{1..100}:
+    email: 'user.<current()>\@example.com'
+    firstName: '<firstName()>'
+    lastName: '<lastName()>'
+    password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$aFVZIzW7jBDLDoWB7WxI9w\$2Z9n3OZUE1Q0qGdkDf6CV2mEPrFftNtbZpQAQ/UZx7c' # SecretPassword123!
+    roles: ['ROLE_USER']
+    active: true
+    manager: '@manager_<numberBetween(1, 10)>'
+    createdAt: <date_create()>

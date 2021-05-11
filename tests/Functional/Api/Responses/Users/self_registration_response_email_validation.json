@@ -1,0 +1,12 @@
+{
+  "@context": "/api/v1/contexts/ConstraintViolationList",
+  "@type": "ConstraintViolationList",
+  "hydra:title": "An error occurred",
+  "hydra:description": "@string@",
+  "violations": [
+    {
+      "propertyPath": "email",
+      "message": "This value is already used."
+    }
+  ]
+}

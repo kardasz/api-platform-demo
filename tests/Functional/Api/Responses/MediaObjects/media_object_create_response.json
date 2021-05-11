@@ -1,0 +1,16 @@
+{
+  "@context": "/api/v1/contexts/MediaObject",
+  "@id": "/api/v1/media_objects/@uuid@",
+  "@type": "http://schema.org/MediaObject",
+  "contentUrl": "/media/@number@/@number@/@string@",
+  "fileName": "@string@",
+  "owner": {
+      "@id": "/api/v1/users/@uuid@",
+      "@type": "User",
+      "email": "user.1@example.com",
+      "firstName": "@string@",
+      "lastName": "@string@",
+      "id":"@uuid@"
+  },
+  "id":"@uuid@"
+}
