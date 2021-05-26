@@ -13,13 +13,14 @@
         "doctrine/doctrine-bundle": "^2.2",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.8",
-        "easycorp/easyadmin-bundle": "^3.2",
+        "easycorp/easyadmin-bundle": "^3.3",
         "gedmo/doctrine-extensions": "^3.0",
         "knplabs/knp-gaufrette-bundle": "^0.7.1",
         "league/oauth2-server": "^8.1",
         "nelmio/cors-bundle": "^2.1",
         "nyholm/psr7": "^1.4",
         "phpdocumentor/reflection-docblock": "^5.2",
+        "ramsey/uuid-doctrine": "^1.6",
         "stof/doctrine-extensions-bundle": "^v1.6",
         "symfony/asset": "5.2.*",
         "symfony/console": "5.2.*",
@@ -41,8 +42,8 @@
         "symfony/validator": "5.2.*",
         "symfony/webpack-encore-bundle": "^1.11",
         "symfony/yaml": "5.2.*",
-        "ramsey/uuid-doctrine": "^1.6",
-        "trikoder/oauth2-bundle": "^3.2"
+        "trikoder/oauth2-bundle": "^3.2",
+        "vich/uploader-bundle": "^1.17"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.4",
